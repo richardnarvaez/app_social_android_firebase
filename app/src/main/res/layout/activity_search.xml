@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.richardnarvaez.up.ec.pikapstudio.up.Activity.MainActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:id="@+id/not_bar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="@color/colorPrimaryDarkLight" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <!--app:layout_scrollFlags="scroll|enterAlways|snap"-->
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:tabIndicatorColor="@color/colorTextSecundaryDark" />
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_search" />
+
+        <!--android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="46dp"
+            android:backgroundTint="@color/colorWhite"
+            android:src="@drawable/vector_basket"
+            android:tint="@color/colorPrimary"
+            app:layout_anchor="@id/content_info"
+            app:layout_anchorGravity="top|end"
+            app:pressedTranslationZ="6dp" /-->
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <!-- Insert your actual layout here -->
+
+</FrameLayout>

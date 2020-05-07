@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dirtyWhite"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".Activity.MainActivity.MainActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="?android:colorPrimary"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.richardnarvaez.up.NavigationViewPersonalized.Widget.AnimatedImageView
+                        android:id="@+id/notification"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/circle_notification"
+                        android:padding="6dp"
+                        android:src="@drawable/notification_drawable"
+                        android:tint="@color/colorWhite"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/searchMenu"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:padding="4dp"
+                        android:src="@drawable/vector_search"
+                        android:tint="@color/colorSecundary"
+                        android:visibility="gone" />
+
+                    <com.richardnarvaez.up.NavigationViewPersonalized.Widget.AnimatedImageView
+                        android:id="@+id/arcImage"
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="22dp"
+                        android:src="@drawable/hamb"
+                        android:tint="@color/colorPrimary"
+                        android:visibility="visible" />
+
+                    <com.richardnarvaez.up.NavigationViewPersonalized.Widget.AnimatedTextView
+                        android:id="@+id/toolbarTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLength="18"
+                        android:maxLines="1"
+                        android:text="Feed"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorSecundary"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#CCC" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        <!--app:layout_behavior="com.richardnarvaez.up.ui.BottomNavViewBehavior"-->
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:visibility="gone"
+            app:menu="@menu/menu_bottom_navigation" />
+
+        <RelativeLayout
+            android:id="@+id/navigationBottom"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:visibility="visible">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_add_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:tint="@color/dirtyWhite"
+                android:visibility="visible"
+                app:backgroundTint="@color/colorPrimary"
+                app:srcCompat="@drawable/vector_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorWhite"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:padding="16dp"
+                    android:tint="@color/colorSecundary"
+                    app:srcCompat="@drawable/vector_card" />
+
+                <ImageView
+                    android:id="@+id/nav_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:padding="16dp"
+                    android:tint="@color/colorNoSelect"
+                    app:srcCompat="@drawable/vector_search" />
+
+                <ImageView
+                    android:id="@+id/nav_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:padding="16dp"
+                    android:tint="@color/colorNoSelect"
+                    app:srcCompat="@drawable/vector_add_circle" />
+
+                <ImageView
+                    android:id="@+id/nav_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:padding="16dp"
+                    android:tint="@color/colorNoSelect"
+                    app:srcCompat="@drawable/vector_up_trendy" />
+
+
+                <ImageView
+                    android:id="@+id/nav_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:padding="16dp"
+                    android:tint="@color/colorNoSelect"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/vector_gift" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.webianks.library.PopupBubble
+            android:id="@+id/popup_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:elevation="4dp"
+            android:visibility="gone"
+            app:pb_backgroundColor="@color/colorPrimary" />
+
+        <!--<include layout="@layout/bottom_sheet_detail_image" />-->
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/frmVideoContainer"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:elevation="4dp"-->
+    <!--app:layout_constraintDimensionRatio="h,16:9"-->
+    <!--app:layout_constraintEnd_toEndOf="@+id/guidelineMarginEnd"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/guidelineVertical"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal"-->
+    <!--tools:background="@color/colorPrimaryDark" />-->
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/frmDetailsContainer"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:alpha="0"-->
+    <!--android:visibility="visible"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/frmVideoContainer" />-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guidelineHorizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:layout_constraintGuide_percent="0.685" />-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guidelineVertical"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintGuide_percent="0.425" />-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guidelineBottom"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:layout_constraintGuide_percent="0.90" />-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guidelineMarginEnd"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintGuide_percent="0.975" />-->
+
+</android.support.constraint.ConstraintLayout>

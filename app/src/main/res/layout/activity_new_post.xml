@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecundary"
+    android:fitsSystemWindows="true"
+    tools:context=".Activity.PhothoUpload.NewPostActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:visibility="gone"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Upload Story" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/completeUpload"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="gone" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageUpload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/degraded_black_up_down"
+            android:fitsSystemWindows="true"
+            android:rotation="180" />
+
+        <FrameLayout
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/status"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:onClick="onBackGetImage"
+            android:src="@drawable/vector_x"
+            app:backgroundTint="@color/colorWhite"
+            app:fabSize="mini" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/status"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabsetYoutube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:onClick="setYoutube"
+                android:src="@drawable/vector_youtube"
+                app:backgroundTint="@color/colorWhite"
+                app:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabsetLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:onClick="setLink"
+                android:src="@drawable/vector_link"
+                app:backgroundTint="@color/colorWhite"
+                app:fabSize="mini" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabsetText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/vector_title"
+                app:backgroundTint="@color/colorWhite"
+                app:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabsetLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:onClick="setLocate"
+                android:src="@drawable/vector_location"
+                app:backgroundTint="@color/colorWhite"
+                app:fabSize="mini" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/uploadImage"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/postHastag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginBottom="48dp"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/chip_white"
+                    android:hint="#Hastag"
+                    android:imeOptions="actionNext"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:maxWidth="250dp"
+                    android:padding="8dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorSecundary" />
+
+            </LinearLayout>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Private    "
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/postTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/fredoka_one"
+                android:hint="Title"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/dirtyWhite"
+                android:textSize="45sp" />
+
+            <EditText
+                android:id="@+id/postDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:hint="Description"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/dirtyWhite"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/uploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="48dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/chip_white"
+            android:padding="8dp"
+            android:text="Upload Post"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecundary" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutYoutube"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
+            android:id="@+id/youtube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Data" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="YouTube"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Credits: " />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tITitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="54">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tIDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="280">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/uploadVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!--android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/colorWhite"
+        android:src="@drawable/vector_check"
+        android:tint="@color/colorPrimary" /-->
+
+</android.support.design.widget.CoordinatorLayout>
+

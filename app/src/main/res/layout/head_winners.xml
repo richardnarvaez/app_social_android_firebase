@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="154dp"
+        android:layout_height="154dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/back" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView4"
+        android:layout_width="75dp"
+        android:layout_height="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView6"
+        android:layout_width="75dp"
+        android:layout_height="74dp"
+        android:layout_alignTop="@+id/circleImageView5"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@+id/circleImageView4"
+        android:src="@mipmap/ic_launcher" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView5"
+        android:layout_width="75dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/circleImageView4"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@+id/circleImageView4"
+        android:src="@mipmap/ic_launcher" />
+
+</RelativeLayout>

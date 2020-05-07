@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecundary">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:hint="Text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="#b1fafafa"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bootomBar"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorWhite"
+        android:drawableEnd="@drawable/vector_right"
+        android:drawableTint="@color/colorPrimary"
+        android:text="Up Load"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary" />
+
+    <FrameLayout
+        android:id="@+id/bootomBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

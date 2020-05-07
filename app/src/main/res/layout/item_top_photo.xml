@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imagePost"
+                    android:layout_width="match_parent"
+                    android:layout_height="235dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible" />
+
+                <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
+                    android:id="@+id/youtube_player_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="16dp"
+                    android:layout_toEndOf="@+id/profileItem"
+                    android:layout_toStartOf="@id/btUp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Cargando..."
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/titlePost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Cargando..." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/up"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/vector_up" />
+
+                    <TextView
+                        android:id="@+id/numUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="32K" />
+
+                    <ImageView
+                        android:id="@+id/down"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:rotation="180"
+                        android:src="@drawable/vector_up" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/profileItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/thumbUser"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txtPosition"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignBottom="@+id/thumbUser"
+                        android:layout_alignEnd="@+id/thumbUser"
+                        android:background="@drawable/chip_border_wb"
+                        android:gravity="center"
+                        android:text="97"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

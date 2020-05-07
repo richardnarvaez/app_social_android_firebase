@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/idFeed"
+        android:icon="@drawable/vector_card"
+        android:title=""
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/idDiscover"
+        android:icon="@drawable/vector_search"
+        android:title=""
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/idNew"
+        android:icon="@drawable/vector_add"
+        android:title=""
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/idUpvote"
+        android:icon="@drawable/vector_up_trendy"
+        android:title=""
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/idGift"
+        android:icon="@drawable/vector_gift"
+        android:title=""
+        app:showAsAction="always|withText" />
+
+</menu>

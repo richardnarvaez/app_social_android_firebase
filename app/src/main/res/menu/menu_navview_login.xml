@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nv_l_email"
+        android:icon="@drawable/vector_facebook"
+        android:title="Nefty" />
+
+    <item
+        android:id="@+id/nv_l_google"
+        android:icon="@drawable/vector_google"
+        android:title="Google" />
+
+    <item
+        android:id="@+id/nv_l_facebook"
+        android:icon="@drawable/vector_facebook"
+        android:title="Facebook" />
+
+    <item
+        android:id="@+id/nv_l_private"
+        android:icon="@drawable/vector_google"
+        android:title="Incognito" />
+
+</menu>

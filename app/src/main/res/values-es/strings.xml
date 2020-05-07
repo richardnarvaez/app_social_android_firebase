@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_profile">Perfil</string>
+    <string name="title_activity_login">Iniciar sesión</string>
+    <string name="error_required_field">Error</string>
+    <string name="action_logout">Cerrar sesión</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="sigin">Iniciar sesión</string>
+    <string name="title_gift">Regalos &amp; Sorteos</string>
+    <string name="title_home">Feed</string>
+    <string name="title_about">Acerca de</string>
+    <string name="error_upload_task_create">Error al subir</string>
+    <string name="title_search">Descubre</string>
+    <string name="title_buy">Map</string>
+</resources>

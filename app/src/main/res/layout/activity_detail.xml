@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.richardnarvaez.up.View.ElasticDragDismissFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggableFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="true"
+    app:dragDismissDistance="@dimen/drag_dismiss_distance"
+    app:dragDismissScale="1"
+    tools:context="com.richardnarvaez.up.Activity.DetailActivity">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@drawable/vector_up"-->
+        <!--android:tint="@color/colorWhite"-->
+        <!--app:backgroundTint="@color/colorPrimaryDark" />-->
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</com.richardnarvaez.up.View.ElasticDragDismissFrameLayout>

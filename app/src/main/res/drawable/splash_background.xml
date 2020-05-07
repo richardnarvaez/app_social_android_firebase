@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_bottom_stroke">
+        <shape android:shape="rectangle">
+            <solid android:color="#fafafa" />
+        </shape>
+    </item>
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/ic_launcher" />
+    </item>
+
+    <!--Text of Bottom-->
+    <!--<item android:gravity="bottom">-->
+    <!--<bitmap android:gravity="bottom"-->
+    <!--android:src="@drawable/launcher_text2" />-->
+    <!--</item>-->
+
+</layer-list>

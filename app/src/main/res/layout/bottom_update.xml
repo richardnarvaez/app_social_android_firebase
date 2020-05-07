@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="#FFFFFF"
+    android:elevation="12dp"
+    android:onClick="onClick"
+    android:visibility="invisible"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="?attr/actionBarSize"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="16dp"
+        android:gravity="center|start"
+        android:text="UPDATE"
+        android:textColor="@color/red_d"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout3"
+        android:layout_below="@+id/textView13"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="Update: \nEsta nueva actulaización arregla los eerroes de la version anterior.
+            \n\n** Sistema >>
+            \n** Diseño >>" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Avaliable: 3.0.4.5" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/green_d"
+            android:text="Actualizar"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

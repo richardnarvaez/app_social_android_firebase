@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/post_type_youtube"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView-->
+        <!--android:id="@+id/youtube_player_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp" />-->
+
+        <TextView
+            android:id="@+id/credits"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_height="wrap_content"
+            android:text="Credits: "
+            android:textColor="@color/blue_d" />
+    </LinearLayout>
+
+
+</FrameLayout>

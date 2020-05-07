@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/post_type_photo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:transitionName="cardViewThumb"
+        app:cardBackgroundColor="@color/colorSecundary"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/post_photo"
+                android:layout_width="match_parent"
+                android:layout_height="455dp"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:background="#28020202"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/videoImage"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/vector_play_circle"
+                    android:tint="@color/dirtyWhite" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/chip_white"
+                android:text="#creative"
+                android:textColor="@color/colorSecundary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/post_photo"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/colorWhite"
+                android:text="Read"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#91000000"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="26dp"
+            android:transitionName="card"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                tools:context="com.richardnarvaez.up.ec.pikapstudio.up.Activity.DetailProductActivity">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.richardnarvaez.up.View.SquareImageView
+                        android:id="@+id/image_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/degraded_blue"
+                        android:scaleType="centerCrop"
+                        android:transitionName="full_image" />
+
+                    <com.richardnarvaez.up.View.SquareImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/degraded_shader" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/chip"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/text_Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55$"
+                            android:textColor="@color/colorTextPrimaryLight" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/image_product"
+                        android:layout_alignEnd="@+id/relativeLayout2"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/vector_fullscreen"
+                        android:tint="#fafafa" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/content_detail_product" />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/trash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#D32F2F"
+            android:onClick="onClickTrash"
+            android:src="@drawable/vector_trash"
+            android:tint="@color/colorWhite"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</RelativeLayout>

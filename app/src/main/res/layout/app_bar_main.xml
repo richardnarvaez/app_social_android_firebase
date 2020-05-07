@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="0dp"
+    app:cardUseCompatPadding="false"
+    tools:context="com.richardnarvaez.up.Activity.MainActivity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/dirtyWhite"
+            android:padding="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--<ec.pikapstudio.nefty.Presentation.Widget.ArcView-->
+                <!--android:id="@+id/arcView"-->
+                <!--android:layout_width="85dp"-->
+                <!--android:layout_height="63dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@android:color/white"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+                <com.richardnarvaez.up.NavigationViewPersonalized.Widget.AnimatedImageView
+                    android:id="@+id/arcImage"
+                    android:layout_width="28dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginStart="22dp"
+                    android:tint="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toBottomOf="@+id/toolbarTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/toolbarTitle"
+                    app:layout_constraintVertical_bias="0.50" />
+
+                <com.richardnarvaez.up.NavigationViewPersonalized.Widget.AnimatedTextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:textAllCaps="true"
+                    android:text="Tribu"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_activity_home" />
+
+</android.support.v7.widget.CardView>

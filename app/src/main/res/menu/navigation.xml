@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/vector_home"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/vector_search"
+        android:title="@string/title_news" />
+
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@drawable/vector_heart"
+        android:title="@string/title_fourth" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_notifications" />
+
+    <item
+        android:id="@+id/navigation_bs"
+        android:icon="@drawable/vector_account"
+        android:title="@string/title_profile" />
+
+</menu>

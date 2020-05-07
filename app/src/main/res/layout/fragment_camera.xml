@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:id="@+id/glviewFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<org.wysaid.view.CameraRecordGLSurfaceView-->
+            <!--android:id="@+id/myGLSurfaceView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal|top" />
+
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/effects"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:clipToPadding="false"
+            android:paddingLeft="183dp"
+            android:paddingRight="183dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Camera No Found \nComing Soon"
+            android:textColor="@color/colorWhite"
+            android:textSize="32dp" />
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/navigation"
+            android:layout_centerHorizontal="true">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="32dp"
+                android:layout_weight="1"
+                android:src="@drawable/button_flash"
+                android:tint="@color/colorWhite" />
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/button_camera" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/vector_camera_switch"
+                android:tint="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

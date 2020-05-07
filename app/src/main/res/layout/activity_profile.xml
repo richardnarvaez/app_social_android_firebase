@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Activity.ProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.Dark.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/coll_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dirtyWhite"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed">
+
+            <com.richardnarvaez.up.View.SquareImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:layout_collapseMode="parallax" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:backgroundTint="@color/colorWhite"
+                    android:elevation="0dp"
+                    android:fitsSystemWindows="true"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp">
+
+                            <RelativeLayout
+                                android:id="@+id/contentprofileUser"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profileUser"
+                                    android:layout_width="65dp"
+                                    android:layout_height="65dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@mipmap/ic_launcher"
+                                    android:transitionName="tran_img_profile" />
+
+                                <RelativeLayout
+                                    android:id="@+id/image_verified"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/chip_white"
+                                    android:padding="0dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/vector_approval"
+                                        android:tint="@color/green_d" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_toEndOf="@+id/contentprofileUser"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Loading..."
+                                    android:textColor="#000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold"
+                                    android:transitionName="tran_tv_profile" />
+
+                                <TextView
+                                    android:id="@+id/textuserName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cargando..."
+                                    android:textColor="#000"
+                                    android:textSize="12sp"
+                                    android:transitionName="tran_tv_profile" />
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="250K votes"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/bt_follow"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_border"
+                                android:text="Follow"
+                                android:textColor="#000"
+                                android:textSize="10dp" />
+
+                            <Button
+                                android:id="@+id/bt_mess"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_like"
+                                android:gravity="center"
+                                android:text="Send Message"
+                                android:textColor="#fff"
+                                android:textSize="10dp" />
+
+                            <Button
+                                android:id="@+id/bt_recommend"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:text="Recomendar"
+                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/bt_edit_profile"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_weight="1"
+                                android:text="Editar"
+                                android:textColor="#000"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#ccc" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textview_followers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:id="@+id/text_des_follow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Followers"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/text_post_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Post"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Crowns"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/degraded_black_up_down"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="pin" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.Dark.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recyclerProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".Activity.ProfileActivity" />
+
+</android.support.design.widget.CoordinatorLayout>
