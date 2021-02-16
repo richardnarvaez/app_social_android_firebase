@@ -12,7 +12,7 @@ Cualquiera que desee aportar algo es bienvenido.
 - Buscar por perfil
 
 #### El CHAT lo subire en otro Repositorio.
-Open [GITHUB REPO](https://github.com/richardnarvaez/chat-android-firebase) to view Chat repo.
+Open [GITHUB REPO](https://github.com/richardnarvaez/chat-android-firebase) to see Chat repo.
 
 Images
 
